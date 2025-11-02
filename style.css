@@ -2459,6 +2459,12 @@ body.dark-mode {
 }
         }
 
+        @media (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+
         /* PRICE ANIMATION */
 .price-converted {
   opacity: 0;
