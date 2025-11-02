@@ -1677,6 +1677,43 @@ body.dark-mode {
             }
         }
 
+        @media (max-width: 480px) {
+    .why-shop {
+        padding: 40px 15px; /* reduced padding for small screens */
+    }
+
+    .why-shop h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr; /* one card per row on very small screens */
+        gap: 15px;
+    }
+
+    .feature-card {
+        padding: 24px 16px;
+        min-height: 180px;
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .feature-icon img {
+        width: 20px;
+        height: 20px;
+        animation-duration: 12s; /* slower rotation on mobile */
+    }
+
+    .feature-text {
+        font-size: 14px;
+    }
+}
+
+
         /* Story Section */
         .story-section {
             display: grid;
