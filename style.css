@@ -1679,7 +1679,7 @@ body.dark-mode {
 
         @media (max-width: 480px) {
     .why-shop {
-        padding: 40px 15px; /* reduced padding for small screens */
+        padding: 40px 16px; /* reduced padding for small screens */
     }
 
     .why-shop h2 {
@@ -1689,7 +1689,7 @@ body.dark-mode {
 
     .features-grid {
         grid-template-columns: 1fr; /* one card per row on very small screens */
-        gap: 15px;
+        gap: 16px;
     }
 
     .feature-card {
@@ -1703,8 +1703,8 @@ body.dark-mode {
     }
 
     .feature-icon img {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         animation-duration: 9s; /* slower rotation on mobile */
     }
 
