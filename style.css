@@ -1705,11 +1705,11 @@ body.dark-mode {
     .feature-icon img {
         width: 20px;
         height: 20px;
-        animation-duration: 12s; /* slower rotation on mobile */
+        animation-duration: 9s; /* slower rotation on mobile */
     }
 
     .feature-text {
-        font-size: 14px;
+        font-size: 20px;
     }
 }
 
