@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Atinesworld</title>
+    
+    <!-- Link to your main stylesheet -->
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="product-detail.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="./images/your-logo.svg" alt="Atinesworld Enterprises Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#shop">Products</a></li>
+            <li><a href="#story">Our Story</a></li>
+        </ul>
+
+        <!-- 💱 Currency Selector (ADD THIS HERE) -->
+    <!-- Currency Selector -->
+<div class="currency-selector-wrapper">
+    <div class="currency-selector pill" id="currencySelector">
+        <span id="currentFlag">🇺🇸</span>
+        <span id="currentCurrency">USD</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </div>
+
+<!-- Currency Dropdown -->
+<div class="currency-dropdown" id="currencyDropdown" role="menu" aria-label="Currency Options">
+        <div class="currency-option" data-currency="USD" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇺🇸</span>
+            <div class="currency-name">
+                <span class="currency-code">USD</span>
+                <span class="currency-full-name">US Dollar</span>
+            </div>
+        </div>
+        
+        <div class="currency-option" data-currency="NGN" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇳🇬</span>
+            <div class="currency-name">
+                <span class="currency-code">NGN</span>
+                <span class="currency-full-name">Nigerian Naira</span>
+            </div>
+        </div>
+        
+        <div class="currency-option" data-currency="GBP" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇬🇧</span>
+            <div class="currency-name">
+                <span class="currency-code">GBP</span>
+                <span class="currency-full-name">British Pound</span>
+            </div>
+        </div>
+        
+        <div class="currency-option" data-currency="EUR" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇪🇺</span>
+            <div class="currency-name">
+                <span class="currency-code">EUR</span>
+                <span class="currency-full-name">Euro</span>
+            </div>
+        </div>
+        
+        <div class="currency-option" data-currency="CAD" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇨🇦</span>
+            <div class="currency-name">
+                <span class="currency-code">CAD</span>
+                <span class="currency-full-name">Canadian Dollar</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional loading indicator -->
+<div class="currency-loading" id="currencyLoading"></div>
+        <a href="#shop" class="shop-btn">SHOP ALL</a>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="index.html#shop" class="breadcrumb-link">Shop</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current" id="breadcrumbCategory">Products</span>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current" id="breadcrumbProduct">Loading...</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            
+            <!-- Loading State -->
+            <div class="loading-state" id="loadingState">
+                <div class="loading-spinner"></div>
+                <p>Loading product details...</p>
+            </div>
+
+            <!-- Error State -->
+            <div class="error-state" id="errorState" style="display: none;">
+                <div class="error-icon">⚠️</div>
+                <h2>Product Not Found</h2>
+                <p>Sorry, we couldn't find the product you're looking for.</p>
+                <a href="index.html#shop" class="btn-primary">Browse All Products</a>
+            </div>
+
+            <!-- Product Content -->
+            <div class="product-detail-content" id="productContent" style="display: none;">
+                
+                <!-- Product Gallery & Info Grid -->
+                <div class="product-grid">
+                    
+                    <!-- Left: Product Gallery -->
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <div class="image-container" id="mainImageContainer">
+                                <span class="product-emoji" id="productEmoji">🌾</span>
+                            </div>
+                            <button class="zoom-btn" id="zoomBtn" aria-label="Zoom image">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="m21 21-4.35-4.35"/>
+                                    <line x1="11" y1="8" x2="11" y2="14"/>
+                                    <line x1="8" y1="11" x2="14" y2="11"/>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <!-- Product Badges -->
+                        <div class="product-badges">
+                            <span class="badge badge-featured">⭐ Featured</span>
+                            <span class="badge badge-authentic">🇳🇬 Authentic</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Product Info -->
+                    <div class="product-info-main">
+                        
+                        <!-- Category Tag -->
+                        <div class="category-tag" id="categoryTag">Grains</div>
+                        
+                        <!-- Product Title -->
+                        <h1 class="product-title" id="productTitle">Loading...</h1>
+                        
+                        <!-- Rating -->
+                        <div class="product-rating-main">
+                            <div class="stars" id="productStars">
+                                ★★★★★
+                            </div>
+                            <span class="rating-value" id="ratingValue">4.8</span>
+                            <span class="rating-count">(127 reviews)</span>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="product-price-main">
+                            <span class="current-price" id="currentPrice" data-base-price="19.99">$19.99</span>
+                            <span class="price-note">Price updates based on selected currency</span>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="product-description-main">
+                            <h3>Product Description</h3>
+                            <p id="productDescription">Loading description...</p>
+                        </div>
+
+                        <!-- Key Features -->
+                        <div class="product-features">
+                            <h3>Key Features</h3>
+                            <ul id="productFeatures">
+                                <li>✓ 100% Authentic Nigerian Product</li>
+                                <li>✓ Carefully Sourced & Packaged</li>
+                                <li>✓ Fresh & High Quality</li>
+                                <li>✓ Ships Worldwide</li>
+                            </ul>
+                        </div>
+
+                        <!-- Quantity Selector -->
+                        <div class="quantity-selector">
+                            <label for="quantity">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" id="decreaseQty" aria-label="Decrease quantity">−</button>
+                                <input type="number" id="quantity" value="1" min="1" max="99" readonly>
+                                <button class="qty-btn" id="increaseQty" aria-label="Increase quantity">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="product-actions">
+                            <button class="btn-add-cart" id="addToCartBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"/>
+                                    <circle cx="20" cy="21" r="1"/>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                                </svg>
+                                Add to Cart
+                            </button>
+                            <button class="btn-wishlist" id="wishlistBtn" aria-label="Add to wishlist">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </button>
+                            <button class="btn-share" id="shareBtn" aria-label="Share product">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="18" cy="5" r="3"/>
+                                    <circle cx="6" cy="12" r="3"/>
+                                    <circle cx="18" cy="19" r="3"/>
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Product Meta Info -->
+                        <div class="product-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">SKU:</span>
+                                <span class="meta-value" id="productSKU">ATW-001</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Category:</span>
+                                <span class="meta-value" id="productCategory">Grains</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Stock:</span>
+                                <span class="meta-value in-stock">In Stock</span>
+                            </div>
+                        </div>
+
+                        <!-- Trust Badges -->
+                        <div class="trust-badges">
+                            <div class="trust-badge">
+                                <span class="badge-icon">🚚</span>
+                                <div class="badge-text">
+                                    <strong>Free Shipping</strong>
+                                    <span>On orders over $50</span>
+                                </div>
+                            </div>
+                            <div class="trust-badge">
+                                <span class="badge-icon">🔒</span>
+                                <div class="badge-text">
+                                    <strong>Secure Payment</strong>
+                                    <span>100% protected</span>
+                                </div>
+                            </div>
+                            <div class="trust-badge">
+                                <span class="badge-icon">↩️</span>
+                                <div class="badge-text">
+                                    <strong>Easy Returns</strong>
+                                    <span>30-day guarantee</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product Tabs -->
+                <div class="product-tabs">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="details">Details</button>
+                        <button class="tab-btn" data-tab="nutrition">Nutrition</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews</button>
+                        <button class="tab-btn" data-tab="shipping">Shipping</button>
+                    </div>
+
+                    <div class="tabs-content">
+                        <!-- Details Tab -->
+                        <div class="tab-panel active" id="tab-details">
+                            <h3>Product Details</h3>
+                            <p id="detailsContent">This authentic Nigerian product brings the true taste of Nigeria to your home. Carefully sourced and packaged to maintain freshness and quality.</p>
+                            
+                            <h4>How to Use</h4>
+                            <ul id="usageInstructions">
+                                <li>Store in a cool, dry place</li>
+                                <li>Use within recommended timeframe</li>
+                                <li>Follow package instructions for best results</li>
+                            </ul>
+                        </div>
+
+                        <!-- Nutrition Tab -->
+                        <div class="tab-panel" id="tab-nutrition">
+                            <h3>Nutritional Information</h3>
+                            <table class="nutrition-table">
+                                <tr>
+                                    <td>Serving Size</td>
+                                    <td>100g</td>
+                                </tr>
+                                <tr>
+                                    <td>Calories</td>
+                                    <td>350 kcal</td>
+                                </tr>
+                                <tr>
+                                    <td>Protein</td>
+                                    <td>8g</td>
+                                </tr>
+                                <tr>
+                                    <td>Carbohydrates</td>
+                                    <td>75g</td>
+                                </tr>
+                                <tr>
+                                    <td>Fat</td>
+                                    <td>2g</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Reviews Tab -->
+                        <div class="tab-panel" id="tab-reviews">
+                            <h3>Customer Reviews</h3>
+                            <div class="reviews-summary">
+                                <div class="review-score">
+                                    <div class="score-number">4.8</div>
+                                    <div class="score-stars">★★★★★</div>
+                                    <div class="score-text">Based on 127 reviews</div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-name">Chioma A.</div>
+                                    <div class="review-stars">★★★★★</div>
+                                </div>
+                                <p class="review-text">"Absolutely authentic! Tastes just like home. Will definitely order again."</p>
+                                <div class="review-date">2 weeks ago</div>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-name">James O.</div>
+                                    <div class="review-stars">★★★★☆</div>
+                                </div>
+                                <p class="review-text">"Great quality product. Delivery was fast and packaging was excellent."</p>
+                                <div class="review-date">1 month ago</div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Tab -->
+                        <div class="tab-panel" id="tab-shipping">
+                            <h3>Shipping Information</h3>
+                            <p>We ship worldwide to bring authentic Nigerian products to your doorstep.</p>
+                            
+                            <h4>Delivery Times</h4>
+                            <ul>
+                                <li><strong>Nigeria:</strong> 2-5 business days</li>
+                                <li><strong>UK:</strong> 5-7 business days</li>
+                                <li><strong>USA/Canada:</strong> 7-10 business days</li>
+                                <li><strong>Europe:</strong> 5-8 business days</li>
+                                <li><strong>Rest of World:</strong> 10-14 business days</li>
+                            </ul>
+
+                            <h4>Shipping Costs</h4>
+                            <ul>
+                                <li>Free shipping on orders over $50</li>
+                                <li>Standard shipping: $8.99</li>
+                                <li>Express shipping: $19.99</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Products -->
+                <div class="related-products">
+                    <h2>You May Also Like</h2>
+                    <div class="related-products-grid" id="relatedProductsGrid">
+                        <!-- Related products will be dynamically inserted here -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">
+        <div class="toast-icon">✓</div>
+        <div class="toast-message">Product added to cart!</div>
+    </div>
+
+    <script src="products.js"></script>      <!-- Load this FIRST -->
+    <script src="product-detail.js"></script> <!-- Load this SECOND -->
+</body>
+</html>

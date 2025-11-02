@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atinesworld Enterprises - Authentic Nigerian snacks, drinks, spices, and lifestyle products from Ilorin to the world.">
+    <title>Atinesworld Enterprises | Authentic Nigerian Products</title>
+    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"></script>
+
+</head>
+<body>
+    <div class="theme-toggle-wrapper">
+    <div class="theme-toggle" id="themeToggle">
+        <div class="theme-toggle-circle">
+            <span class="toggle-icon sun-icon">☀️</span>
+            <span class="toggle-icon moon-icon">🌙</span>
+        </div>
+    </div>
+</div>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="./images/your-logo.svg" alt="Atinesworld Enterprises Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#shop">Products</a></li>
+            <li><a href="#story">Our Story</a></li>
+        </ul>
+
+        <!-- 💱 Currency Selector (ADD THIS HERE) -->
+    <!-- Currency Selector -->
+<div class="currency-selector-wrapper">
+    <div class="currency-selector pill" id="currencySelector">
+        <span id="currentFlag">🇺🇸</span>
+        <span id="currentCurrency">USD</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </div>
+
+<!-- Currency Dropdown -->
+<div class="currency-dropdown" id="currencyDropdown" role="menu" aria-label="Currency Options">
+        <div class="currency-option" data-currency="USD" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇺🇸</span>
+            <div class="currency-name">
+                <span class="currency-code">USD</span>
+                <span class="currency-full-name">US Dollar</span>
+            </div>
+        </div>
+        
+        <div class="currency-option" data-currency="NGN" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇳🇬</span>
+            <div class="currency-name">
+                <span class="currency-code">NGN</span>
+                <span class="currency-full-name">Nigerian Naira</span>
+            </div>
+        </div>
+        
+        <div class="currency-option" data-currency="GBP" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇬🇧</span>
+            <div class="currency-name">
+                <span class="currency-code">GBP</span>
+                <span class="currency-full-name">British Pound</span>
+            </div>
+        </div>
+        
+        <div class="currency-option" data-currency="EUR" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇪🇺</span>
+            <div class="currency-name">
+                <span class="currency-code">EUR</span>
+                <span class="currency-full-name">Euro</span>
+            </div>
+        </div>
+        
+        <div class="currency-option" data-currency="CAD" role="menuitem" tabindex="0">
+            <span aria-hidden="true">🇨🇦</span>
+            <div class="currency-name">
+                <span class="currency-code">CAD</span>
+                <span class="currency-full-name">Canadian Dollar</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional loading indicator -->
+<div class="currency-loading" id="currencyLoading"></div>
+        <a href="#shop" class="shop-btn">SHOP ALL</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero rotating-gradient" id="home">
+        <div class="hero-content">
+            <h1>Authentic Nigerian Snacks, Drinks & Style From Ilorin to the World.</h1>
+            
+            <p class="hero-description">
+                Atinesworld is a proudly woman-owned retail brand based in Ilorin, Nigeria. We bring you locally made treasures — from refreshing Aya Kunu drinks and spicy Kilishi to handmade fabrics and leather shoes — loved by customers across Nigeria, the UK, and Canada.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#shop" class="btn-primary">SHOP NOW</a>
+                <a href="#story" class="btn-secondary">DISCOVER OUR STORY</a>
+            </div>
+
+            <div class="trust-badges">
+                <div class="badge">
+                    <div class="badge-icon">
+                        <img src="./images/Country badge.svg" alt="UK and Canada Flag">
+                    </div>
+                    <span>Trusted by UK & Canada Customers</span>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">
+                        <img src="./images/Shipping badge.svg" alt="Worldwide Shipping Icon">
+                    </div>
+                    <span>Worldwide Shipping</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="./images/Frame 9.png" alt="Nigerian family enjoying authentic Nigerian food and drinks together">
+        </div>
+    </section>
+    
+
+    <!-- Why Shop Section -->
+    <section class="why-shop" id="why-shop">
+        <h2>Why Shop Atinesworld?</h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="./images/world.svg" alt="Global reach icon">
+                </div>
+                <div class="feature-text">Loved by Nigerians in UK & Canada</div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="./images/authentic.svg" alt="Authentic product icon">
+                </div>
+                <div class="feature-text">100% Authentic & Locally Sourced</div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="./images/woman.svg" alt="Woman owned business icon">
+                </div>
+                <div class="feature-text">Proudly woman-owned and community-driven</div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="./images/export.svg" alt="Worldwide shipping icon">
+                </div>
+                <div class="feature-text">Export-ready packaging and worldwide delivery</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section" id="story">
+        <div class="story-image">
+            <img src="./images/Whisk_31d6d91d5d717ac920d45bfddfcf8a03dr (1).jpeg" alt="Woman in traditional African attire with Nigerian products">
+        </div>
+
+        <div class="story-content">
+            <h2>Rooted in Tradition. Crafted with Love.</h2>
+            
+            <p>
+                Atinesworld is a woman-owned brand based in Ilorin, dedicated to bringing authentic Nigerian products to the world. From Donkwa, spicy Kulikuli, and Garri Ijebu to Aya Kunu drinks and Yaji spice, each item is sourced from trusted local farmers and artisans.
+            </p>
+
+            <p>
+                Our mission is simple: to celebrate Nigerian heritage while making it accessible to anyone, anywhere. Whether you're shopping for locally made snacks, traditional fabrics, or handcrafted leather shoes, Atinesworld connects you with products that carry the rich taste and culture of Nigeria.
+            </p>
+
+            <a href="#story" class="btn-story">DISCOVER OUR STORY</a>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections-section" id="collection">
+        <h2>Explore Our Collections</h2>
+        
+        <div class="collections-grid">
+            <div class="collection-card">
+                <div class="collection-icon">
+                    <img src="./images/C1.svg" alt="Drinks and Snacks Icon">
+                </div>
+                <h3>Drinks & Snacks</h3>
+                <p>From refreshing Aya Kunu to spicy Kilishi, Donkwa, Garri Ijebu, and crunchy Kulikuli — perfect for every craving.</p>
+                <a href="#drinks-snacks" class="btn-collection">SHOP NOW</a>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-icon">
+                    <img src="./images/C2.svg" alt="Spices and Condiments Icon">
+                </div>
+                <h3>Spices & Condiments</h3>
+                <p>Bold Nigerian flavors like Yaji spice, crafted to bring heat and authenticity to every meal.</p>
+                <a href="#spices" class="btn-collection">SHOP NOW</a>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-icon">
+                    <img src="./images/C3.svg" alt="Fabrics and Footwear Icon">
+                </div>
+                <h3>Fabrics & Footwear</h3>
+                <p>Handwoven fabrics and handcrafted leather shoes from Ilorin — timeless fashion rooted in tradition</p>
+                <a href="#fabrics" class="btn-collection">SHOP NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-filter-section">
+        <div class="search-filter-container">
+            
+            <div class="search-box">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <input 
+                    type="text" 
+                    id="productSearch" 
+                    class="search-input" 
+                    placeholder="Search for products..."
+                    autocomplete="on"
+                >
+                <button class="search-clear" id="clearSearch" style="display: none;">✕</button>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">
+                    All Products
+                    <span class="filter-count" id="count-all">50</span>
+                </button>
+                <button class="filter-btn" data-category="snacks">
+                    Snacks
+                    <span class="filter-count" id="count-snacks">15</span>
+                </button>
+                <button class="filter-btn" data-category="drinks">
+                    Drinks
+                    <span class="filter-count" id="count-drinks">12</span>
+                </button>
+                <button class="filter-btn" data-category="spices">
+                    Spices
+                    <span class="filter-count" id="count-spices">8</span>
+                </button>
+                <button class="filter-btn" data-category="grains">
+                    Grains
+                    <span class="filter-count" id="count-grains">8</span>
+                </button>
+                <button class="filter-btn" data-category="soups">
+                    Soups
+                    <span class="filter-count" id="count-soups">7</span>
+                </button>
+            </div>
+
+            <div class="advanced-filters">
+                
+                <div class="filter-group">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect" class="filter-select">
+                        <option value="default">Featured</option>
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="price-low">Price (Low to High)</option>
+                        <option value="price-high">Price (High to Low)</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="priceRange">Max Price:</label>
+                    <select id="priceRange" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="15">Under $15</option>
+                        <option value="20">Under $20</option>
+                        <option value="25">Under $25</option>
+                        <option value="30">Under $30</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="ratingFilter">Min Rating:</label>
+                    <select id="ratingFilter" class="filter-select">
+                        <option value="0">All Ratings</option>
+                        <option value="4.5">4.5+ Stars</option>
+                        <option value="4.7">4.7+ Stars</option>
+                        <option value="4.8">4.8+ Stars</option>
+                    </select>
+                </div>
+
+                <button class="reset-filters-btn" id="resetFilters">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="1 4 1 10 7 10"/>
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+                    </svg>
+                    Reset
+                </button>
+            </div>
+
+            <div class="results-summary">
+                <p id="resultsText">Showing <strong id="resultsCount">8</strong> of <strong id="totalCount">50</strong> products</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="products-section" id="shop">
+        <h2>Loved by Nigerians, Enjoyed Worldwide</h2>
+        <p class="products-subtitle">
+            From Ilorin to Lagos, London to Toronto — our bestsellers bring the true taste
+            of Nigeria wherever you are.
+        </p>
+
+        <div class="products-wrapper" id="productsContainer">
+            <div class="products-row" id="productsRow">
+            </div>
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+            </svg>
+            <h3>No Products Found</h3>
+            <p>Try adjusting your search or filters</p>
+            <button class="btn-primary" id="clearFiltersBtn">
+                Clear All Filters
+            </button>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community-section">
+        <div class="community-header">
+            <div class="community-text">
+                <p>Authentic flavors, timeless fabrics, and handcrafted essentials — made in Ilorin, enjoyed around the world.</p>
+                <a href="#join" class="btn-join">JOIN OUR GLOBAL FAMILY</a>
+            </div>
+            <div>
+                <h2>Bringing Nigerians Together, Wherever You Are</h2>
+            </div>
+        </div>
+
+        <div class="community-images">
+            <div class="image-left">
+                <img src="./images/Community 1.jpeg" alt="Woman preparing traditional Nigerian drinks">
+                <div class="ritual-badge">
+                    <h3>Your Daily Ritual</h3>
+                    <p>Make tradition part of your lifestyle with snacks and spices that connect you back home, no matter where you are.</p>
+                </div>
+            </div>
+            <div class="image-right">
+                <img src="./images/Community 2.jpeg" alt="Nigerian family enjoying a meal together">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-container">
+            <div class="testimonial-image-wrapper">
+                <div class="testimonial-bg-shape"></div>
+                <div class="testimonial-image">
+                    <img src="./images/Group 4.png" alt="Happy customer">
+                </div>
+            </div>
+
+            <div class="testimonial-content">
+                <h2>What our customer says about us</h2>
+                
+                <div class="testimonial-slider">
+                    <div class="testimonial-item active">
+                        <p class="testimonial-text">
+                            Finally, I can enjoy authentic Garri Ijebu right here in Toronto — the same rich taste and crisp texture that instantly takes me back to my childhood days in Nigeria. It feels amazing to relive those simple moments and traditions, even miles away from home.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="/images/Testimonial 1.jpg" alt="Balikis Dambani">
+                            </div>
+                            <div class="author-info">
+                                <h4>Balikis Dambani,</h4>
+                                <p>Canada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">
+                            The Kilishi from Atinesworld is absolutely incredible! The spicy, smoky flavor reminds me of the street vendors back home in Lagos. I can't believe I can get this quality in London. It's perfect for my weekend gatherings with friends.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="/images/Testimonial 2.jpg" alt="Amina Johnson">
+                            </div>
+                            <div class="author-info">
+                                <h4>Amina Johnson,</h4>
+                                <p>United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">
+                            As someone living abroad, finding authentic Nigerian products has always been a challenge. Atinesworld changed that for me! The Aya Kunu drink is refreshing and tastes just like home. Thank you for keeping our culture alive!
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="/images/Testimonial 3.jpg" alt="Chukwudi Okafor">
+                            </div>
+                            <div class="author-info">
+                                <h4>Chukwudi Okafor,</h4>
+                                <p>Canada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">
+                            The handcrafted leather shoes are beautiful and comfortable! I love supporting a woman-owned brand that celebrates Nigerian craftsmanship. The quality is outstanding and I get compliments everywhere I go.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Fatima Adeyemi">
+                            </div>
+                            <div class="author-info">
+                                <h4>Fatima Adeyemi,</h4>
+                                <p>United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-nav">
+                    <button class="nav-btn" id="prevBtn" onclick="changeTestimonial(-1)" aria-label="Previous testimonial">←</button>
+                    <button class="nav-btn" id="nextBtn" onclick="changeTestimonial(1)" aria-label="Next testimonial">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="cta-background"></div>
+        <div class="cta-content">
+            <h2>Taste Home. Share the Culture Wherever You Are.</h2>
+            <p>Enjoy authentic Nigerian flavors delivered to your doorstep in the UK, Canada, and across Nigeria.</p>
+            <a href="#story" class="btn-cta-discover">DISCOVER OUR STORY</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>ATINESWORLD ENTERPRISES</h3>
+                <p>Connecting Cultures Through Taste</p>
+                <p class="footer-address">
+                    Opp Henry George Hotel, Adewole,<br>
+                    Ilorin, Kwara State NG
+                </p>
+                <div class="footer-country-selector">
+                    <select class="country-dropdown" aria-label="Select country">
+                        <option>WORLDWIDE</option>
+                        <option>Nigeria</option>
+                        <option>United Kingdom</option>
+                        <option>Canada</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="flag-icon">🇳🇬</div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#story">About</a></li>
+                    <li><a href="#recipes">Lifestyle</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Customer Care</h4>
+                <ul class="footer-links">
+                    <li><a href="#shipping">Shipping & Delivery</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#returns">Returns & Refunds</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Taste Home, Wherever You Are</h4>
+                <p>Get updates on new products, special diaspora bundles, and discounts for international shipping.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address">
+                    <button type="submit" class="btn-newsletter">Join The Fam</button>
+                </form>
+                <div class="social-links">
+                    <h5>Stay connected with on</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="WhatsApp">
+                            <img src="./images/phone.svg" alt="WhatsApp" />
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <img src="./images/instagram.svg" alt="Instagram" />
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <img src="./images/facebook.svg" alt="Facebook" />
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <img src="./images/youtube.svg" alt="YouTube" />
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <img src="./images/snapchat.svg" alt="TikTok" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Atinesworld Enterprises. All rights reserved. Made with ❤️ in Ilorin, Nigeria.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-arrow" id="scrollArrow" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+<div class="whatsapp-float">
+    <a 
+        href="https://wa.me/2348138451051?text=Hi%2C%20I%27m%20interested%20in%20your%20Atinesworld%20products%21" 
+        class="whatsapp-button" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+    >
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+    <div class="whatsapp-tooltip">Chat with us!</div>
+</div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+    <script src="js/hero-gradient.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", initHeroGradientAnimation);
+</script>
+<!-- Add to your HTML before closing </body> -->
+<script src="advanced-interactions.js"></script>
+<link rel="stylesheet" href="products.css">
+<script src="products.js"></script>
+<script src="product-detail.js"></script> <!-- Load this SECOND -->
+
+</body>
+</html>
