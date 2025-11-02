@@ -1132,21 +1132,63 @@ body {
     }
 }
 
+/* ============================
+   MOBILE RESPONSIVENESS (480px)
+   ============================ */
 @media (max-width: 480px) {
+    /* Navbar padding and layout */
+    nav {
+        flex-direction: column; /* stack items vertically */
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    /* Logo */
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    /* Nav links */
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* Nav links alignment */
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* Currency selector visibility */
     .currency-selector {
         min-width: 75px;
+        padding: 6px 10px;
+        font-size: 14px;
     }
 
-    /* Show only flag on very small screens */
+    /* Show currency code on mobile */
     .currency-selector #currentCurrency {
-        display: none;
+        display: inline; /* force show for mobile */
+        font-size: 12px;
     }
 
+    /* Dropdown alignment */
     .currency-dropdown {
-        right: auto;
         left: 0;
+        right: auto;
+        min-width: 150px;
+    }
+
+    /* Navbar actions spacing */
+    .navbar-actions {
+        gap: 10px;
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-start;
     }
 }
+
 
 /* ============================================
    ALTERNATIVE COMPACT STYLE
@@ -2461,7 +2503,7 @@ body.dark-mode {
 
         @media (max-width: 480px) {
             .product-card {
-                width: 343px;
+                width: 100%;
             }
         }
 
