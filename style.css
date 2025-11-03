@@ -861,6 +861,13 @@ body {
             display: block;
         }
 
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            color: var(--color-primary);
+        }
+
         /* ============================================
    CURRENCY SELECTOR - NAVBAR INTEGRATION
    Matches Atinesworld Design System
