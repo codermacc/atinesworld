@@ -1140,7 +1140,7 @@ body {
     nav {
         flex-direction: column; /* stack items vertically */
         align-items: flex-start;
-        padding: 15px 20px;
+        padding: 32px 16px;
     }
 
     /* Logo */
