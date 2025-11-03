@@ -1135,7 +1135,7 @@ body {
 /* ============================
    MOBILE RESPONSIVENESS (480px)
    ============================ */
-@media (max-width: 480px) {
+@media (max-width: 375px) {
     /* Navbar padding and layout */
     nav {
         flex-direction: column; /* stack items vertically */
@@ -1589,7 +1589,7 @@ body.dark-mode {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 375px) {
   .feature-icon {
     width: 48px;    /* Mobile professional size */
     height: 48px;
@@ -1677,9 +1677,9 @@ body.dark-mode {
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 375px) {
     .why-shop {
-        padding: 40px 16px; /* reduced padding for small screens */
+        padding: 32px 16px; /* reduced padding for small screens */
     }
 
     .why-shop h2 {
@@ -1795,6 +1795,13 @@ body.dark-mode {
 
                 .story-content p {
                     font-size: 16px;
+                }
+            }
+
+            @media (max-width: 375px) {
+                .story-image img {
+                    padding: 32px 16px;
+                    height: auto;
                 }
             }
     
@@ -1924,6 +1931,26 @@ body.dark-mode {
 
             .collection-card h3 {
                 font-size: 28px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .collections-section {
+                padding: 32px 16px 60px;
+            }
+
+            .collections-section h2 {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+
+            .collection-card {
+                padding: 30px 20px;
+                min-height: 320px;
+            }
+
+            .collection-card h3 {
+                font-size: 24px;
             }
         }
             /* Products Section */
@@ -2538,8 +2565,9 @@ body.dark-mode {
 }
         }
 
-        @media (max-width: 480px) {
-            .product-card {
+        @media (max-width: 375px) {
+            .products-section {
+                padding: 32px 16px;
                 width: 100%;
             }
         }
@@ -2722,6 +2750,34 @@ body.dark-mode {
 
             .ritual-badge p {
                 font-size: 13px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .community-section {
+                padding: 32px 16px;
+            }
+
+            .community-text h2 {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+
+            .community-text p {
+                font-size: 14px;
+            }
+
+            .ritual-badge {
+                min-width: 200px;
+                padding: 15px 20px;
+            }
+
+            .ritual-badge h3 {
+                font-size: 18px;
+            }
+
+            .ritual-badge p {
+                font-size: 12px;
             }
         }
 
@@ -2957,6 +3013,30 @@ body.dark-mode {
                 max-width: 350px;
             }
         }
+
+        @media (max-width: 375px) {
+            .testimonials-section {
+                padding: 32px 16px;
+            }
+        }
+
+            .testimonial-content h2 {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            .testimonial-text {
+                font-size: 14px;
+            }
+
+            .testimonial-bg-shape {
+                width: 280px;
+                height: 400px;
+            }
+
+            .testimonial-image {
+                max-width: 280px;
+            }
          /* CTA Banner Section */
         .cta-banner {
             position: relative;
@@ -3207,6 +3287,20 @@ body.dark-mode {
     50% {
         opacity: 1;
         transform: scale(1.2);
+    }
+}
+
+@media (max-width: 375px) {
+    .cta-content h2 {
+        font-size: 32px;
+    }
+
+    .cta-content p {
+        font-size: 16px;
+    }
+
+    .cta-content {
+        padding: 32px 16px;
     }
 }
 
