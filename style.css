@@ -2868,9 +2868,9 @@ body.dark-mode {
         }
 
         .testimonial-content h2 {
-            font-size: 40px;
+            font-size: 48px;
             font-weight: 700;
-            color: #2C2C2C;
+            color: var(--color-text);
             line-height: 1.2;
             margin-bottom: 40px;
         }
@@ -3026,29 +3026,7 @@ body.dark-mode {
             }
         }
 
-        @media (max-width: 375px) {
-            .testimonials-section {
-                padding: 32px 16px;
-            }
-        }
-
-            .testimonial-content h2 {
-                font-size: 28px;
-                margin-bottom: 30px;
-            }
-
-            .testimonial-text {
-                font-size: 14px;
-            }
-
-            .testimonial-bg-shape {
-                width: 280px;
-                height: 400px;
-            }
-
-            .testimonial-image {
-                max-width: 280px;
-            }
+        
          /* CTA Banner Section */
         .cta-banner {
             position: relative;
