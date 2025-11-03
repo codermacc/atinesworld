@@ -1434,7 +1434,7 @@ body.dark-mode {
 
         .btn-primary {
             background: var(--gradient-primary);
-            color: white;
+            color: var(--color-text);
             padding: 16px 36px;
             border-radius: 8px;
             text-decoration: none;
@@ -1445,9 +1445,10 @@ body.dark-mode {
         }
 
         .btn-primary:hover {
-            background: var(--gradient-primary-hover);
+            background: var(--color-secondary);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            color: var(--color-text);
         }
 
         .btn-secondary {
