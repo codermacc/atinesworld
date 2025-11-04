@@ -2584,6 +2584,8 @@ body.dark-mode {
             }
         }
 
+        
+
         /* PRICE ANIMATION */
 .price-converted {
   opacity: 0;
@@ -2833,25 +2835,61 @@ body.dark-mode {
   }
 }
 
+/* 🔥 Animated Rotating Blob */
 .testimonial-bg-shape {
-    position: absolute;
-    top: -50px;
-    right: -1px;
-    width: 600px;
-    height: 600px;
-    background: linear-gradient(90deg, #E67E22 0%, #A0522D 60%);
-    border-radius: 50% 40% 60% 50% / 55% 65% 45% 50%;
-    z-index: 1;
-    filter: drop-shadow(0 20px 60px rgba(160, 82, 45, 0.3));
-    transition: filter 3s ease-in-out; /* hover still smooth */
-    animation: float-blob 9s ease-in-out infinite; /* continuous float */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 700px;
+  background: linear-gradient(90deg, #E67E22 0%, #A0522D 60%);
+  border-radius: 50% 40% 60% 50% / 55% 65% 45% 50%;
+  z-index: 1;
+  filter: drop-shadow(0 20px 60px rgba(160, 82, 45, 0.3));
+  transform: translate(-50%, -50%);
+  animation: rotate-blob 12s linear infinite; /* slower + infinite rotation */
+  transition: transform 2s ease, filter 2s ease;
 }
 
-/* Hover: amplify scale and shadow */
-.testimonial-bg-shape:hover {
-    transform: rotate(-360deg) scale(1.80); /* slightly bigger on hover */
-    filter: drop-shadow(0 25px 70px rgba(160, 82, 45, 0.35));
+/* 🌀 Rotation Animation */
+@keyframes rotate-blob {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
+
+/* 💫 Hover Effect: Slight Scale + Stronger Shadow */
+.testimonial-bg-shape:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  filter: drop-shadow(0 25px 70px rgba(160, 82, 45, 0.35));
+}
+
+/* 📱 Responsive for 480px and below */
+@media (max-width: 480px) {
+  .testimonial-bg-shape {
+    width: 320px;
+    height: 360px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate-blob 15s linear infinite; /* even slower on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-bg-shape {
+    width: 450px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate-blob 35s linear infinite; /* even slower on mobile */
+  }
+}
+
 
 
         .testimonial-image {
@@ -2955,7 +2993,8 @@ body.dark-mode {
 
         .testimonial-nav {
             display: flex;
-            gap: 15px;
+            gap: 16px;
+            margin-top: 0px;
         }
 
         .nav-btn {

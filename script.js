@@ -1221,15 +1221,17 @@ console.log(`Current theme: ${savedTheme}`);
 
 /**
  * ============================================
+ /**
+ * ============================================
  * ATINESWORLD PRODUCTS JAVASCRIPT
  * Product filtering, searching, rendering & currency conversion
  * ============================================
  */
 
 // Product Database - 50 Nigerian Products
-const productsData = [
+const productsData= [
     // Snacks (15)
-    { id: 1, name: "Kilishi (Spicy Beef Jerky)", category: "snacks", price: 24.99, rating: 4.9, description: "Packed with bold, smoky Nigerian flavor.", productimage: "image/kilishi.jpg" },
+    { id: 1, name: "Kilishi (Spicy Beef Jerky)", category: "snacks", price: 24.99, rating: 4.9, description: "Packed with bold, smoky Nigerian flavor.", emoji: "🥩" },
     { id: 2, name: "Donkwa", category: "snacks", price: 16.99, rating: 4.8, description: "Traditional Donkwa with a spicy-sweet taste.", emoji: "🍪" },
     { id: 3, name: "Kulikuli", category: "snacks", price: 14.99, rating: 4.7, description: "Crunchy groundnut snack, perfect blend.", emoji: "🥜" },
     { id: 4, name: "Danbunama", category: "snacks", price: 22.99, rating: 4.8, description: "Savory chicken flakes with Northern spices.", emoji: "🍗" },
@@ -1288,9 +1290,6 @@ const productsData = [
     { id: 49, name: "Dried Fish", category: "soups", price: 23.99, rating: 4.8, description: "Smoked dried fish for stews.", emoji: "🐟" },
     { id: 50, name: "Banga Spice", category: "soups", price: 15.99, rating: 4.7, description: "Palm fruit soup seasoning blend.", emoji: "🌴" },
 ];
-
-
-
 
 // ============================================
 // CURRENCY CONFIGURATION
@@ -1715,9 +1714,9 @@ function createProductCard(product) {
     
     return `
         <div class="product-card" data-category="${product.category}" data-price="${product.price}" data-rating="${product.rating}">
-            <a href="product-detail.html?id=${product.id}" class="product-link">
+            <div class="product-link" onclick="window.location.href='product-detail.html?id=${product.id}'" style="cursor: pointer;">
                 <div class="product-image">
-                    ${product.image ? `<img src="${product.image}" alt="${product.name}">` : ''}
+                    ${product.emoji}
                     <span class="buy-now-btn">Buy Now</span>
                 </div>
                 <div class="product-info">
@@ -1731,7 +1730,7 @@ function createProductCard(product) {
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     `;
 }
