@@ -124,10 +124,6 @@ nav.nav-scrolled .nav-links a {
     color: #ffffff !important;
 }
 
-[data-theme="dark"] .hamburger-menu span {
-    background-color: #f5f5f5 !important;
-}
-
 /* Shop Button */
 .shop-btn {
     background: var(--gradient-primary) !important;
@@ -798,29 +794,22 @@ nav.nav-scrolled .nav-links a {
 @media (max-width: 768px) {
     .theme-toggle-wrapper {
         top: 90px;
-        right: 24px;
+        right: 20px;
     }
     
     .theme-toggle {
         width: 50px;
-        height: 32px;
+        height: 26px;
     }
     
     .theme-toggle-circle {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
     }
     
     .theme-toggle.active .theme-toggle-circle {
         left: 26px;
     }
-
-        @media (max-width: 375px) {
-            .theme-toggle-wrapper {
-                top: 80px;
-                right: 16px;
-            }
-        }
 }
 
 /* Global Reset */
@@ -1143,63 +1132,21 @@ body {
     }
 }
 
-/* ============================
-   MOBILE RESPONSIVENESS (480px)
-   ============================ */
-@media (max-width: 375px) {
-    /* Navbar padding and layout */
-    nav {
-        flex-direction: column; /* stack items vertically */
-        align-items: flex-start;
-        padding: 32px 16px;
-    }
-
-    /* Logo */
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    /* Nav links */
-    .nav-links {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-    }
-
-    /* Nav links alignment */
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    /* Currency selector visibility */
+@media (max-width: 480px) {
     .currency-selector {
         min-width: 75px;
-        padding: 6px 10px;
-        font-size: 14px;
     }
 
-    /* Show currency code on mobile */
+    /* Show only flag on very small screens */
     .currency-selector #currentCurrency {
-        display: inline; /* force show for mobile */
-        font-size: 12px;
+        display: none;
     }
 
-    /* Dropdown alignment */
     .currency-dropdown {
-        left: 0;
         right: auto;
-        min-width: 150px;
-    }
-
-    /* Navbar actions spacing */
-    .navbar-actions {
-        gap: 10px;
-        margin-top: 10px;
-        width: 100%;
-        justify-content: flex-start;
+        left: 0;
     }
 }
-
 
 /* ============================================
    ALTERNATIVE COMPACT STYLE
@@ -1434,7 +1381,7 @@ body.dark-mode {
 
         .btn-primary {
             background: var(--gradient-primary);
-            color: var(--color-text);
+            color: white;
             padding: 16px 36px;
             border-radius: 8px;
             text-decoration: none;
@@ -1445,10 +1392,9 @@ body.dark-mode {
         }
 
         .btn-primary:hover {
-            background: var(--color-secondary);
+            background: var(--gradient-primary-hover);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            color: var(--color-text);
         }
 
         .btn-secondary {
@@ -1601,7 +1547,7 @@ body.dark-mode {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .feature-icon {
     width: 48px;    /* Mobile professional size */
     height: 48px;
@@ -1689,43 +1635,6 @@ body.dark-mode {
             }
         }
 
-        @media (max-width: 375px) {
-    .why-shop {
-        padding: 32px 16px; /* reduced padding for small screens */
-    }
-
-    .why-shop h2 {
-        font-size: 28px;
-        margin-bottom: 40px;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr; /* one card per row on very small screens */
-        gap: 16px;
-    }
-
-    .feature-card {
-        padding: 24px 16px;
-        min-height: 180px;
-    }
-
-    .feature-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .feature-icon img {
-        width: 24px;
-        height: 24px;
-        animation-duration: 9s; /* slower rotation on mobile */
-    }
-
-    .feature-text {
-        font-size: 20px;
-    }
-}
-
-
         /* Story Section */
         .story-section {
             display: grid;
@@ -1807,13 +1716,6 @@ body.dark-mode {
 
                 .story-content p {
                     font-size: 16px;
-                }
-            }
-
-            @media (max-width: 375px) {
-                .story-image img {
-                    padding: 32px 16px;
-                    height: auto;
                 }
             }
     
@@ -1943,26 +1845,6 @@ body.dark-mode {
 
             .collection-card h3 {
                 font-size: 28px;
-            }
-        }
-
-        @media (max-width: 375px) {
-            .collections-section {
-                padding: 32px 16px 60px;
-            }
-
-            .collections-section h2 {
-                font-size: 28px;
-                margin-bottom: 40px;
-            }
-
-            .collection-card {
-                padding: 30px 20px;
-                min-height: 320px;
-            }
-
-            .collection-card h3 {
-                font-size: 24px;
             }
         }
             /* Products Section */
@@ -2577,15 +2459,6 @@ body.dark-mode {
 }
         }
 
-        @media (max-width: 375px) {
-            .products-section {
-                padding: 32px 16px;
-                width: 100%;
-            }
-        }
-
-        
-
         /* PRICE ANIMATION */
 .price-converted {
   opacity: 0;
@@ -2767,34 +2640,6 @@ body.dark-mode {
             }
         }
 
-        @media (max-width: 375px) {
-            .community-section {
-                padding: 32px 16px;
-            }
-
-            .community-text h2 {
-                font-size: 28px;
-                margin-bottom: 40px;
-            }
-
-            .community-text p {
-                font-size: 14px;
-            }
-
-            .ritual-badge {
-                min-width: 200px;
-                padding: 15px 20px;
-            }
-
-            .ritual-badge h3 {
-                font-size: 18px;
-            }
-
-            .ritual-badge p {
-                font-size: 12px;
-            }
-        }
-
         /* Testimonials Section */
         .testimonials-section {
             background: #F5E6D3;
@@ -2835,61 +2680,25 @@ body.dark-mode {
   }
 }
 
-/* 🔥 Animated Rotating Blob */
 .testimonial-bg-shape {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 700px;
-  background: linear-gradient(90deg, #E67E22 0%, #A0522D 60%);
-  border-radius: 50% 40% 60% 50% / 55% 65% 45% 50%;
-  z-index: 1;
-  filter: drop-shadow(0 20px 60px rgba(160, 82, 45, 0.3));
-  transform: translate(-50%, -50%);
-  animation: rotate-blob 12s linear infinite; /* slower + infinite rotation */
-  transition: transform 2s ease, filter 2s ease;
+    position: absolute;
+    top: -50px;
+    right: -1px;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(90deg, #E67E22 0%, #A0522D 60%);
+    border-radius: 50% 40% 60% 50% / 55% 65% 45% 50%;
+    z-index: 1;
+    filter: drop-shadow(0 20px 60px rgba(160, 82, 45, 0.3));
+    transition: filter 3s ease-in-out; /* hover still smooth */
+    animation: float-blob 9s ease-in-out infinite; /* continuous float */
 }
 
-/* 🌀 Rotation Animation */
-@keyframes rotate-blob {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-/* 💫 Hover Effect: Slight Scale + Stronger Shadow */
+/* Hover: amplify scale and shadow */
 .testimonial-bg-shape:hover {
-  transform: translate(-50%, -50%) scale(1.2);
-  filter: drop-shadow(0 25px 70px rgba(160, 82, 45, 0.35));
+    transform: rotate(-360deg) scale(1.80); /* slightly bigger on hover */
+    filter: drop-shadow(0 25px 70px rgba(160, 82, 45, 0.35));
 }
-
-/* 📱 Responsive for 480px and below */
-@media (max-width: 480px) {
-  .testimonial-bg-shape {
-    width: 320px;
-    height: 360px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: rotate-blob 15s linear infinite; /* even slower on mobile */
-  }
-}
-
-@media (max-width: 768px) {
-  .testimonial-bg-shape {
-    width: 450px;
-    height: 450px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: rotate-blob 35s linear infinite; /* even slower on mobile */
-  }
-}
-
 
 
         .testimonial-image {
@@ -2908,7 +2717,7 @@ body.dark-mode {
         .testimonial-content h2 {
             font-size: 40px;
             font-weight: 700;
-            color: var(--color-text);
+            color: #2C2C2C;
             line-height: 1.2;
             margin-bottom: 40px;
         }
@@ -2993,8 +2802,7 @@ body.dark-mode {
 
         .testimonial-nav {
             display: flex;
-            gap: 16px;
-            margin-top: 0px;
+            gap: 15px;
         }
 
         .nav-btn {
@@ -3064,8 +2872,6 @@ body.dark-mode {
                 max-width: 350px;
             }
         }
-
-        
          /* CTA Banner Section */
         .cta-banner {
             position: relative;
@@ -3316,20 +3122,6 @@ body.dark-mode {
     50% {
         opacity: 1;
         transform: scale(1.2);
-    }
-}
-
-@media (max-width: 375px) {
-    .cta-content h2 {
-        font-size: 32px;
-    }
-
-    .cta-content p {
-        font-size: 16px;
-    }
-
-    .cta-content {
-        padding: 32px 16px;
     }
 }
 
