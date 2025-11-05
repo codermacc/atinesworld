@@ -2382,7 +2382,7 @@ body.dark-mode {
         .product-rating {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 4px;
         }
 
         .star-icon {
@@ -2424,12 +2424,24 @@ body.dark-mode {
 
         @media (max-width: 768px) {
             .products-row {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: var(--space-2);
+            }
+            .product-card {
+                width: 100%;
+            }
+            .product-image img {
+                width: 100%;
+                height: 200px;
+            }
+            .product-image {
+                width: 100%;
+                height: 200px;
             }
             /* ✅ RESPONSIVE */
 @media (max-width: 768px) {
   .products-section {
-    padding: 60px 20px;
+    padding: 60px 24px;
   }
 
   .products-controls {
